@@ -1,9 +1,9 @@
 # main links links
-main:   
+main:
   - title: "CV"
     url: /cv/
-
- - title: "Publications"
+    
+  - title: "Publications"
     url: /publications/
 
  - title: "Recent"
