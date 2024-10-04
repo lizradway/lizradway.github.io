@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - 2000s Retro</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif; /* Classic 2000s fun font */
+            background-color: #ff69b4; /* Hot pink Britney Spears vibe */
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.example.com/retro-bg.jpg'); /* Replace with a fun, Y2K-inspired background image */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            overflow: hidden; /* Prevents scrolling caused by hearts */
+        }
+
+        #main-container {
+            margin: 100px auto;
+            width: 700px;
+            background-color: #fff;
+            padding: 30px;
+            border: 5px solid #00ffff; /* Bright cyan border for fun */
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Strong shadow for depth */
+        }
+
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            padding: 0;
+            color: #ff00ff; /* Vibrant fuchsia text */
+            text-shadow: 3px 3px #0000ff; /* Blue text shadow for retro flair */
+        }
+
+        hr {
+            border: none;
+            border-top: 5px solid #ff4500; /* Bright orange divider */
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        p {
+            font-size: 1.3em;
+            color: #333;
+        }
+
+        .retro-link {
+            font-size: 1.4em;
+            color: #00ff00; /* Neon green links */
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+            font-weight: bold;
+            background-color: #ff00ff; /* Pink background for buttons */
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .retro-link:hover {
+            color: #ff4500;
+            background-color: #00ffff; /* Bright hover effect */
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 1em;
+            color: #ff00ff;
+            text-shadow: 1px 1px #000;
+        }
+
+        /* Falling hearts animation */
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff69b4;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            animation: fall 7s infinite ease-in;
+        }
+
+        /* Creating heart shape */
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: -10px;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateX(-50%) translateY(-120vh) rotate(45deg); /* Start well above screen */
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(-50%) translateY(100vh) rotate(360deg); /* End off the bottom */
+                opacity: 0;
+            }
+        }
+
+        /* Random positions for hearts */
+        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+        .heart:nth-child(3) { left: 30%; animation-delay: 2s; }
+        .heart:nth-child(4) { left: 40%; animation-delay: 3s; }
+        .heart:nth-child(5) { left: 50%; animation-delay: 4s; }
+        .heart:nth-child(6) { left: 60%; animation-delay: 5s; }
+        .heart:nth-child(7) { left: 70%; animation-delay: 6s; }
+        .heart:nth-child(8) { left: 80%; animation-delay: 7s; }
+        .heart:nth-child(9) { left: 90%; animation-delay: 8s; }
+    </style>
+</head>
+<body>
+
+    <!-- Falling hearts -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+
+    <div id="main-container">
+        <h1>Your Name</h1>
+        <hr>
+        <p>Welcome to my personal space! I’m bringing you the coolest vibes of the early 2000s.</p>
+        <a href="#" class="retro-link">Check out my blog</a>
+    </div>
+
+    <footer>
+        © 2024 Your Name | Bringing back the 2000s in style!
+    </footer>
+
+</body>
+</html>

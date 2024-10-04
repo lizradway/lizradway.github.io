@@ -1,4 +1,7 @@
 main:
+  - title: "FunPage"
+    url: /fun/
+
   - title: "CV"
     url: /cv/
 
