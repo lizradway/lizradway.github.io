@@ -8,5 +8,5 @@ main:
   - title: "Recent"
     url: /recent/
 
-  - title: "Blog Posts"
-    url: /year-archive/
+  - title: "Blog"
+    url: /blog/
