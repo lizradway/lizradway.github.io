@@ -7,4 +7,4 @@ redirect_from:
   - /about.html
 ---
 
-Bio TK
+Liz Radway (she/her) is a computer scientist, creative technologist, and dancer with a specific interest in intelligent systems.
