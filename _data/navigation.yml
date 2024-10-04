@@ -3,8 +3,11 @@ main:
   - title: "CV"
     url: /cv/
 
+ - title: "Publications"
+    url: /publications/
+
+ - title: "Recent"
+    url: /recent/
+
   - title: "Blog Posts"
     url: /year-archive/
-    
-  - title: "Guide"
-    url: /markdown/
