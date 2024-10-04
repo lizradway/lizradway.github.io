@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Liz radway"
+title: "Liz Radway"
 author_profile: true
 redirect_from: 
   - /about/
@@ -8,4 +8,3 @@ redirect_from:
 ---
 
 Bio TK
-This is the frontn
