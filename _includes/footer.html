@@ -31,6 +31,7 @@
 
 <script>
     document.getElementById('funModeSwitch').addEventListener('change', function() {
+      console.log(this.checked)
         if (this.checked) {
             // Redirect to the fun page when the toggle is turned on
             window.location.href = '/fun-page.html';
