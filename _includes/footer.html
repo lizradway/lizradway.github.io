@@ -32,7 +32,11 @@
 
 <script>
   document.getElementById('funModeSwitch').addEventListener('change', function() {
-      window.location.href = '/fun-page.html';
+    if (this.checked) {
+      setTimeout(function(){
+        window.location.href = '/fun-page.html';
+      }, 1000);
+    }
   });
 </script>
 
