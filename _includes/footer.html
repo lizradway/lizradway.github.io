@@ -19,73 +19,74 @@
 </div>
 {% endif %}
 
+<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
 <!-- Fun Mode Switch -->
 <div class="fun-mode">
-  <label class="switch">
-      <input type="checkbox" id="funModeSwitch">
-      <span class="slider"></span>
-  </label>
+    <label class="switch">
+        <input type="checkbox" id="funModeSwitch">
+        <span class="slider"></span>
+    </label>
 </div>
 
 <script>
-  document.getElementById('funModeSwitch').addEventListener('change', function() {
-      if (this.checked) {
-          window.location.href = '/fun-page.html';
-      } else {
-          // Optional: You can add functionality for the 'off' state if needed
-      }
-  });
+    document.getElementById('funModeSwitch').addEventListener('change', function() {
+        if (this.checked) {
+            // Redirect to the fun page when the toggle is turned on
+            window.location.href = '/fun-page.html';
+        }
+    });
 </script>
 
 <style>
-  .fun-mode {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-  }
+    .fun-mode {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
 
-  .switch {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 34px;
-  }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
 
-  .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-  }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
 
-  .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      transition: .4s;
-      border-radius: 34px;
-  }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 34px;
+    }
 
-  .slider:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      transition: .4s;
-      border-radius: 50%;
-  }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
 
-  input:checked + .slider {
-      background-color: #2196F3;
-  }
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
 
-  input:checked + .slider:before {
-      transform: translateX(26px);
-  }
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
 </style>
