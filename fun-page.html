@@ -90,7 +90,6 @@
             left: 50%;
             transform: translateX(-50%) rotate(45deg);
             animation: fall 7s infinite ease-in;
-            opacity: 0; /* Initially hidden */
         }
 
         /* Creating heart shape */
@@ -116,12 +115,12 @@
 
         @keyframes fall {
             0% {
-                transform: translateX(-50%) translateY(-100vh) rotate(45deg); /* Start above the screen */
-                opacity: 1; /* Fully visible */
+                transform: translateX(-50%) translateY(-120vh) rotate(45deg); /* Start well above screen */
+                opacity: 1;
             }
             100% {
                 transform: translateX(-50%) translateY(100vh) rotate(360deg); /* End off the bottom */
-                opacity: 0; /* Fade out */
+                opacity: 0;
             }
         }
 
@@ -153,17 +152,6 @@
 
             footer {
                 font-size: 0.9em; /* Smaller footer text */
-            }
-
-            .heart {
-                width: 15px; /* Smaller hearts */
-                height: 15px; /* Smaller hearts */
-            }
-
-            .heart::before,
-            .heart::after {
-                width: 15px; /* Smaller hearts */
-                height: 15px; /* Smaller hearts */
             }
         }
     </style>
