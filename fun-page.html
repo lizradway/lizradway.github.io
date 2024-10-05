@@ -20,8 +20,9 @@
         }
 
         #main-container {
-            margin: 100px auto;
-            width: 700px;
+            margin: 5% auto; /* Use percentage for responsive margins */
+            width: 90%; /* Make it 90% of the viewport width */
+            max-width: 700px; /* Keep max width for larger screens */
             background-color: #fff;
             padding: 30px;
             border: 5px solid #00ffff; /* Bright cyan border for fun */
@@ -30,7 +31,7 @@
         }
 
         h1 {
-            font-size: 4em;
+            font-size: 3em; /* Responsive font size */
             margin: 0;
             padding: 0;
             color: #ff00ff; /* Vibrant fuchsia text */
@@ -45,12 +46,12 @@
         }
 
         p {
-            font-size: 1.3em;
+            font-size: 1.2em; /* Responsive font size */
             color: #333;
         }
 
         .retro-link {
-            font-size: 1.4em;
+            font-size: 1.4em; /* Responsive font size */
             color: #00ff00; /* Neon green links */
             text-decoration: none;
             margin-top: 20px;
@@ -128,6 +129,26 @@
         .heart:nth-child(7) { left: 70%; animation-delay: 6s; }
         .heart:nth-child(8) { left: 80%; animation-delay: 7s; }
         .heart:nth-child(9) { left: 90%; animation-delay: 8s; }
+
+        /* Media Queries for smaller screens */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em; /* Smaller header on mobile */
+            }
+
+            p {
+                font-size: 1.1em; /* Smaller paragraph text */
+            }
+
+            .retro-link {
+                font-size: 1.2em; /* Smaller link font size */
+                padding: 8px 16px; /* Smaller padding */
+            }
+
+            footer {
+                font-size: 0.9em; /* Smaller footer text */
+            }
+        }
     </style>
 </head>
 <body>
@@ -152,7 +173,7 @@
     </div>
 
     <footer>
-        © 2024 Your Name | Bringing back the 2000s in style!
+        © 2024 Liz Radway
     </footer>
 
 </body>
