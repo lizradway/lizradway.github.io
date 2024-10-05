@@ -29,15 +29,17 @@
     </label>
 </div>
 
+{% raw %}
 <script>
     document.getElementById('funModeSwitch').addEventListener('change', function() {
-      console.log(this.checked)
+        console.log('Toggle state:', this.checked);  // Log toggle state
         if (this.checked) {
-            // Redirect to the fun page when the toggle is turned on
+            console.log('Redirecting to /fun-page.html');  // Log redirection
             window.location.href = '/fun-page.html';
         }
     });
 </script>
+{% endraw %}
 
 <style>
     .fun-mode {
