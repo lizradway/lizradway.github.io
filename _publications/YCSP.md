@@ -6,7 +6,7 @@ excerpt: 'This paper explores the personal and professional impact and meaning o
 date: 2024-4-26
 venue: 'Journal 1'
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S0190740924001968'
-citation: ''The meaning of a youth council for suicide prevention: A reflective study with the youth council members, Children and Youth Services Review, Volume 161, 2024, 107624, ISSN 0190-7409, https://doi.org/10.1016/j.childyouth.2024.107624.(https://www.sciencedirect.com/science/article/pii/S0190740924001968)'
+citation: 'The meaning of a youth council for suicide prevention: A reflective study with the youth council members, Children and Youth Services Review, Volume 161, 2024, 107624, ISSN 0190-7409, https://doi.org/10.1016/j.childyouth.2024.107624.(https://www.sciencedirect.com/science/article/pii/S0190740924001968)'
 ---
 
 Kristen Haddad, Alaina Delsignore, Julia-Grace B. Dunn, Alyssa Hann, Hosein Hashemian, Sumaiya Hossain, Diya Joshi, Elsa Khan, Aiden Lenox, Liz Radway, Maya Sivakumaran, Sammy Stenger, Felissa E. Wallace, Joel Taylor, Lisa M. Vaughn,
