@@ -40,14 +40,11 @@ Outreach experience
 
 Arts experience
 ======
-
-
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
+* **The Movement Lab: Student Artist in Residence** (2024)
+  * Researched joint-based human movement prediction using motion capture
+  * Co-presented work in Artificial Intelligence/Environments Festival
+  * Presented full-length work in Student Artist in Residence showing
+* Colab's The Big Jam: Choreographer (2024)
+  * Presented full length work with 7 dancers in split bill show at the Glicker-Milstein Theatre
+* **Columbia Daily Spectator: Arts, Techology, & Entertainment Writer** (2022)
+  *  Staff Writer for Columbia's Student Newspaper (#1 Ranked College Newspaper in the United States)
