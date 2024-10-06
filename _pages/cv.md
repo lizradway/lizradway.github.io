@@ -23,7 +23,7 @@ Tech experience
     * Software Development Engineer Intern (2022)
     * Amazon Future Engineer Intern (2021)
 * **Harvard University:   WECode Tech Conference Distinguished Fellow** (2023)
-  * Served as Digital Media Lead for national women in engineering tech conference
+  * Served as Digital Media Lead for national tech conference run by WECode (Women in Engineering)
 * **Columbia Business School: Perfect Your Pitch Finalist** (2022)
   * Finalist in Columbia Venture Competition: The Undergraduate Challenge
   * Advised Columbia Public Safety with strategic research, contributing to the redesign of LionSafe school safety app.
