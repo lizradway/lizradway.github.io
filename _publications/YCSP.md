@@ -2,8 +2,7 @@
 title: "Youth Council For Suicide Prevention"
 collection: publications
 permalink: /publication/YCSP
-excerpt: 'Abstract: The Youth Council for Suicide Prevention is a group of high school and college students that advise and partner with Cincinnati Children’s Hospital Medical Center on regional suicide prevention efforts. The purpose of this study was to explore the personal and professional impact and meaning of the youth’s experiences as council members. Stories, interviews, and artifacts were collected to illustrate their experiences on the council. A sample of 12 out of 15 consenting current YCSP members were involved in the design of a storytelling workshop and interview guide, interpretation of data, and member checking of themes. YCSP members reported specific benefits from engaging in the council, including feeling empowered to make community change, having the confidence to have open conversations about mental health, and making improvements to their own mental health. This study offers increased understanding of how youth benefit from community-academic partnerships for suicide prevention and the ingredients that make for successful collaborations.
-Keywords: Mental health; Health promotion; Suicide prevention; Youth councils; Youth participatory action research; Community-based participatory research'
+excerpt: 'Keywords: Mental health; Health promotion; Suicide prevention; Youth councils; Youth participatory action research; Community-based participatory research'
 date: 2024-4-26
 venue: 'Children and Youth Services Review'
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S0190740924001968'
