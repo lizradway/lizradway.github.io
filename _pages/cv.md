@@ -28,6 +28,20 @@ Tech experience
   * Finalist in Columbia Venture Competition: The Undergraduate Challenge
   * Advised Columbia Public Safety with strategic research, contributing to the redesign of LionSafe school safety app.
 
+Outreach experience
+======
+* **Elks Scholar Advisory Board: President** (2024)
+  * Served as scholar liason to the Elks National Foundation, representing 17,000 scholars nationally
+  * Served as Board member until elected President in 2023 at bi-annual Board meeting in Chicago
+* Project Management Intern: Boys & Girls Club (2020)
+  * Organized virtual youth engagement projects and collected metrics on program graduation rates
+* TEDxYouth@IndianHill: Executive Director and Introductory Speaker (2019)
+  * Organized official TEDx event with 200+ attendees and a dozen speakers
+
+Arts experience
+======
+
+
 Skills
 ======
 * Skill 1
