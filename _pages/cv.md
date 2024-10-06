@@ -48,3 +48,6 @@ Arts experience
   * Presented full length work with 7 dancers in split bill show at the Glicker-Milstein Theatre
 * **Columbia Daily Spectator: Arts, Techology, & Entertainment Writer** (2022)
   *  Staff Writer for Columbia's Student Newspaper (#1 Ranked College Newspaper in the United States)
+
+I am doer at heart and love to try new things :)
+If there is any opportunity for me to gain experience in something -- related to my field or not -- please reach out. I would love to learn!
