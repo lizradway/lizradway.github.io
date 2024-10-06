@@ -11,20 +11,20 @@ redirect_from:
 
 Education
 ======
-* B.A. in Computer Science (Intelligent Systems Track) , Columbia University, 2024
-* B.A. in Dance, Columbia University 2024
-* Concentration in Mathematics, Columbia University 2024
+* **B.A. in Computer Science** (Intelligent Systems Track) , Columbia University, 2024
+* **B.A. in Dance**, Columbia University 2024
+* **Concentration in Mathematics**, Columbia University 2024
 
 Tech experience
 ======
-* Amazon: Software Development Engineer (2024)
+* **Amazon: Software Development Engineer** (2024)
   * Previous roles in include:
     * Jr. Developer (2022-2024)
     * Software Development Engineer Intern (2022)
     * Amazon Future Engineer Intern (2021)
-* Harvard University:   WECode Tech Conference Distinguished Fellow (2023)
+* **Harvard University:   WECode Tech Conference Distinguished Fellow** (2023)
   * Served as Digital Media Lead for national women in engineering tech conference
-* Columbia Business School: Perfect Your Pitch Finalist (2022)
+* **Columbia Business School: Perfect Your Pitch Finalist** (2022)
   * Finalist in Columbia Venture Competition: The Undergraduate Challenge
   * Advised Columbia Public Safety with strategic research, contributing to the redesign of LionSafe school safety app.
 
