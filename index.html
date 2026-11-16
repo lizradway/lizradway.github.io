@@ -17,7 +17,6 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
-            overflow: hidden; /* Prevents scrolling caused by hearts */
         }
 
         #main-container {
@@ -34,12 +33,45 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Strong shadow for depth */
         }
 
+        /* Resume sections get the same card treatment as the main container */
+        .section {
+            margin: 30px auto;
+            width: 90%;
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border: 5px solid #00ffff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: left;
+            position: relative;
+            z-index: 1;
+        }
+
         h1 {
             font-size: 3em; /* Responsive font size */
             margin: 0;
             padding: 0;
             color: #ff00ff; /* Vibrant fuchsia text */
             text-shadow: 3px 3px #0000ff; /* Blue text shadow for retro flair */
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin: 0 0 10px;
+            text-align: center;
+            color: #ff00ff; /* Vibrant fuchsia text */
+            text-shadow: 2px 2px #0000ff; /* Blue text shadow for retro flair */
+        }
+
+        h3 {
+            font-size: 1.2em;
+            margin: 20px 0 0;
+            color: #0000ff; /* Retro blue for job titles */
+        }
+
+        h3:first-of-type {
+            margin-top: 0;
         }
 
         hr {
@@ -54,6 +86,30 @@
             color: #333;
             line-height: 1.5; /* Better spacing for readability */
             padding: 0 10px; /* Side padding for text */
+        }
+
+        .meta {
+            font-size: 1em;
+            color: #ff1493; /* Deep pink for the when + where line */
+            font-weight: bold;
+            margin: 2px 0 8px;
+            padding: 0 10px;
+        }
+
+        ul {
+            margin: 0 0 10px;
+            padding-left: 35px;
+        }
+
+        li {
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        li::marker {
+            color: #ff00ff; /* Fuchsia bullets */
         }
 
         .retro-link {
@@ -75,8 +131,75 @@
             box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
         }
 
+        /* Little jump-to-section buttons, same vibe as the big link */
+        #nav {
+            margin-top: 20px;
+        }
+
+        .nav-link {
+            font-size: 1em;
+            color: #00ff00;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            background-color: #ff00ff;
+            padding: 6px 12px;
+            margin: 4px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ff4500;
+            background-color: #00ffff;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+        }
+
+        /* Links sitting inside body text, where the big button style is too loud */
+        .inline-link {
+            color: #ff00ff;
+            font-weight: bold;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+        }
+
+        .inline-link:hover {
+            color: #ff4500;
+        }
+
+        .status {
+            color: #ff1493;
+            font-weight: bold;
+        }
+
+        /* Award stickers */
+        .tag {
+            display: inline-block;
+            font-size: 1em;
+            font-weight: bold;
+            color: #0000ff;
+            background-color: #00ffff;
+            border: 2px solid #ff00ff;
+            border-radius: 10px;
+            padding: 4px 10px;
+            margin: 4px;
+            text-decoration: none; /* Stickers that are links shouldn't look underlined */
+            transition: all 0.3s ease;
+        }
+
+        a.tag:hover {
+            color: #00ff00;
+            background-color: #ff00ff; /* Flip to the button colors on hover */
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+        }
+
+        .tag-list {
+            padding: 0 10px 10px;
+        }
+
         footer {
             margin-top: 50px;
+            margin-bottom: 30px;
             font-size: 1em;
             color: #ff00ff;
             text-shadow: 1px 1px #000;
@@ -84,13 +207,15 @@
 
         /* Falling hearts animation */
         .heart {
-            position: absolute;
+            position: fixed; /* Fixed so the hearts never add scrollbars */
             width: 20px;
             height: 20px;
             background-color: #ff69b4;
             left: 50%;
             transform: translateX(-50%) rotate(45deg);
             animation: fall 7s infinite ease-in;
+            pointer-events: none; /* Never block clicks on the cards */
+            z-index: 3; /* In front of the cards, so they fall past the whole page */
         }
 
         /* Creating heart shape */
@@ -117,7 +242,7 @@
         @keyframes fall {
             0% {
                 transform: translateX(-50%) translateY(-120vh) rotate(45deg); /* Start well above screen */
-                opacity: 1;
+                opacity: 0.8; /* Slightly see-through so text stays readable underneath */
             }
             100% {
                 transform: translateX(-50%) translateY(100vh) rotate(360deg); /* End off the bottom */
@@ -125,16 +250,21 @@
             }
         }
 
-        /* Random positions for hearts */
-        .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
-        .heart:nth-child(2) { left: 20%; animation-delay: 1s; }
-        .heart:nth-child(3) { left: 30%; animation-delay: 2s; }
-        .heart:nth-child(4) { left: 40%; animation-delay: 3s; }
-        .heart:nth-child(5) { left: 50%; animation-delay: 4s; }
-        .heart:nth-child(6) { left: 60%; animation-delay: 5s; }
-        .heart:nth-child(7) { left: 70%; animation-delay: 6s; }
-        .heart:nth-child(8) { left: 80%; animation-delay: 7s; }
-        .heart:nth-child(9) { left: 90%; animation-delay: 8s; }
+        /* Random positions for hearts, with mixed speeds so the rain never looks like a row */
+        .heart:nth-child(1) { left: 5%; animation-delay: 0s; animation-duration: 8s; }
+        .heart:nth-child(2) { left: 12%; animation-delay: 3s; animation-duration: 6s; }
+        .heart:nth-child(3) { left: 20%; animation-delay: 1s; animation-duration: 10s; }
+        .heart:nth-child(4) { left: 27%; animation-delay: 5s; animation-duration: 7s; }
+        .heart:nth-child(5) { left: 35%; animation-delay: 2s; animation-duration: 9s; }
+        .heart:nth-child(6) { left: 43%; animation-delay: 4s; animation-duration: 6s; }
+        .heart:nth-child(7) { left: 50%; animation-delay: 0s; animation-duration: 11s; }
+        .heart:nth-child(8) { left: 58%; animation-delay: 6s; animation-duration: 8s; }
+        .heart:nth-child(9) { left: 65%; animation-delay: 1s; animation-duration: 7s; }
+        .heart:nth-child(10) { left: 73%; animation-delay: 3s; animation-duration: 10s; }
+        .heart:nth-child(11) { left: 80%; animation-delay: 5s; animation-duration: 6s; }
+        .heart:nth-child(12) { left: 88%; animation-delay: 2s; animation-duration: 9s; }
+        .heart:nth-child(13) { left: 95%; animation-delay: 4s; animation-duration: 7s; }
+        .heart:nth-child(14) { left: 30%; animation-delay: 7s; animation-duration: 8s; }
 
         /* Media Queries for smaller screens */
         @media (max-width: 600px) {
@@ -142,13 +272,25 @@
                 font-size: 2.5em; /* Smaller header on mobile */
             }
 
+            h2 {
+                font-size: 1.5em;
+            }
+
             p {
                 font-size: 1.1em; /* Smaller paragraph text */
+            }
+
+            li {
+                font-size: 1em;
             }
 
             .retro-link {
                 font-size: 1.2em; /* Smaller link font size */
                 padding: 8px 16px; /* Smaller padding */
+            }
+
+            .nav-link {
+                font-size: 0.9em;
             }
 
             footer {
@@ -169,17 +311,75 @@
     <div class="heart"></div>
     <div class="heart"></div>
     <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
 
     <div id="main-container">
         <h1>Liz Radway</h1>
         <hr>
         <p>Welcome to my personal space!</p>
         <p>Liz Radway (she/her) is a computer scientist, creative technologist, and dancer with a specific interest in intelligent systems.</p>
-        <a href="https://github.com/lizradway" class="retro-link">Check out my github <3</a>
+        <a href="https://github.com/lizradway" class="retro-link">Check out my github &lt;3</a>
+        <div id="nav">
+            <a href="#experience" class="nav-link">~ work &amp; research ~</a>
+            <a href="#writing" class="nav-link">~ writing &amp; papers ~</a>
+            <a href="#talks" class="nav-link">~ talks ~</a>
+            <a href="#school" class="nav-link">~ education &amp; awards ~</a>
+        </div>
+    </div>
+
+    <div class="section" id="experience">
+        <h2>Work &amp; Research</h2>
+        <hr>
+
+        <h3>AWS Velocity Labs / Strands SDK &mdash; Software Development Engineer II</h3>
+        <p class="meta">New York, NY &middot; October 2025 &ndash; Present</p>
+
+        <h3>New York University &mdash; Visiting Post-Bacc Fellow</h3>
+        <p class="meta">Cybersecurity for Democracy Lab &middot; New York, NY &middot; September 2024 &ndash; Present</p>
+
+        <h3>Amazon &mdash; Software Development Engineer</h3>
+        <p class="meta">New York, NY &middot; May 2024 &ndash; October 2025</p>
+    </div>
+
+    <div class="section" id="writing">
+        <h2>Writing &amp; Papers</h2>
+        <hr>
+        <ul>
+            <li>Paper on screen-time tool adoption &mdash; <span class="status">in submission</span>, 2026</li>
+            <li><a class="inline-link" href="https://doi.org/10.1016/j.childyouth.2024.107624" target="_blank" rel="noopener">The meaning of a youth council for suicide prevention</a> &mdash; Children and Youth Services Review, 2024</li>
+            <li><a class="inline-link" href="https://journals.library.columbia.edu/index.php/cusj/blog/view/561" target="_blank" rel="noopener">Watermarking Large Language Models</a> &mdash; Columbia Undergraduate Science Journal, 2023</li>
+        </ul>
+    </div>
+
+    <div class="section" id="talks">
+        <h2>Talks</h2>
+        <hr>
+        <ul>
+            <li><b>AWS re:Invent 2026</b>, Las Vegas &mdash; &ldquo;Cut Your Token Costs in Half: Context Management in Strands&rdquo;</li>
+            <li><b>AWS re:Invent 2026</b>, Las Vegas &mdash; &ldquo;Enforcing Hard Limits on Agent Guardrails&rdquo;</li>
+            <li><b>AGI Summit 2026</b>, San Francisco &mdash; &ldquo;Cut Your Token Cost in Half&rdquo;</li>
+            <li><b>Jack Kent Cooke Foundation 2026</b> &mdash; Best Job Talk</li>
+            <li><b>Harvard WECode 2023</b>, Boston &mdash; Distinguished Undergraduate Fellow</li>
+        </ul>
+    </div>
+
+    <div class="section" id="school">
+        <h2>Education &amp; Awards</h2>
+        <hr>
+
+        <h3>Columbia University</h3>
+        <p class="meta">New York, NY &middot; 2020 &ndash; 2024</p>
+        <p>Computer Science (Intelligence Systems Track), Mathematics, &amp; Dance &middot; GPA 3.85/4.0</p>
+        <div class="tag-list">
+            <a class="tag" href="https://presidentialscholars.org/" target="_blank" rel="noopener">U.S. Presidential Scholar</a><a class="tag" href="https://www.jkcf.org/our-scholarships/" target="_blank" rel="noopener">Jack Kent Cooke Undergraduate Scholar</a><span class="tag">John Jay Scholar</span><a class="tag" href="https://www.elks.org/scholars/" target="_blank" rel="noopener">Elks Scholar</a><a class="tag" href="https://www.college.columbia.edu/academics/HonorsAwardsPrizes" target="_blank" rel="noopener">Columbia College Named Scholar</a><a class="tag" href="https://www.tacobellfoundation.org/live-mas-scholarship/" target="_blank" rel="noopener">Taco Bell Live M&aacute;s Scholar</a><a class="tag" href="https://www.amazonfutureengineer.com/scholarships" target="_blank" rel="noopener">Amazon Future Engineer Scholar</a>        </div>
     </div>
 
     <footer>
-        © 2024 Liz Radway
+        &copy; 2026 Liz Radway
     </footer>
 
 </body>
