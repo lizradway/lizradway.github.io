@@ -134,19 +134,23 @@
         /* Little jump-to-section buttons, same vibe as the big link */
         #nav {
             margin-top: 20px;
+            display: flex;
+            flex-wrap: nowrap; /* Keep all four badges on a single row */
+            justify-content: center;
         }
 
         .nav-link {
-            font-size: 1em;
+            font-size: 0.8em;
             color: #00ff00;
             text-decoration: none;
             display: inline-block;
             font-weight: bold;
             background-color: #ff00ff;
-            padding: 6px 12px;
-            margin: 4px;
+            padding: 5px 9px;
+            margin: 3px;
             border-radius: 10px;
             transition: all 0.3s ease;
+            white-space: nowrap; /* Never break a label mid-phrase */
         }
 
         .nav-link:hover {
@@ -289,8 +293,13 @@
                 padding: 8px 16px; /* Smaller padding */
             }
 
+            /* Too narrow for one row on a phone, so let the badges wrap again */
+            #nav {
+                flex-wrap: wrap;
+            }
+
             .nav-link {
-                font-size: 0.9em;
+                font-size: 0.75em;
             }
 
             footer {
