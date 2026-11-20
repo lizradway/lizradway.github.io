@@ -112,6 +112,22 @@
             color: #ff00ff; /* Fuchsia bullets */
         }
 
+        /* Nested lists: keep em sizing from compounding, tighter spacing */
+        li ul {
+            margin: 4px 0 0;
+            padding-left: 25px;
+            list-style-type: square; /* Solid sub-bullets instead of the faint default hollow circle */
+        }
+
+        li li {
+            font-size: 1em;
+            margin-bottom: 4px;
+        }
+
+        li li::marker {
+            color: #00ffff; /* Cyan sub-bullets */
+        }
+
         .retro-link {
             font-size: 1.4em; /* Responsive font size */
             color: #00ff00; /* Neon green links */
@@ -169,6 +185,66 @@
 
         .inline-link:hover {
             color: #ff4500;
+        }
+
+        /* Small label introducing a list under a role */
+        .sub-label {
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #0000ff;
+            margin: 0 0 4px;
+            padding: 0 10px;
+        }
+
+        /* Theme headings grouping the links under a role */
+        .group-label {
+            font-size: 1em;
+            font-weight: bold;
+            color: #ff00ff;
+            margin: 14px 0 4px;
+            padding: 0 10px;
+        }
+
+        /* Each role is its own collapsible block, so spacing lives on the container */
+        details.role-block {
+            margin-top: 20px;
+        }
+
+        details.role-block:first-of-type {
+            margin-top: 0;
+        }
+
+        /* Click a job title to expand what happened there, no JavaScript required */
+        summary.role {
+            cursor: pointer;
+            list-style: none; /* Swap the browser triangle for our own */
+        }
+
+        summary.role::-webkit-details-marker {
+            display: none; /* Safari needs this one spelled out */
+        }
+
+        summary.role h3 {
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        summary.role h3::before {
+            content: '\25B8\00a0'; /* Right-pointing triangle when closed */
+            color: #ff00ff;
+        }
+
+        details[open] > summary.role h3::before {
+            content: '\25BE\00a0'; /* Down-pointing triangle when open */
+        }
+
+        summary.role:hover h3 {
+            color: #ff4500;
+        }
+
+        summary.role .meta {
+            display: block; /* Date line sits under the title, inside the click target */
+            padding-left: 24px; /* Clear the triangle */
         }
 
         .status {
@@ -344,14 +420,67 @@
         <h2>Work &amp; Research</h2>
         <hr>
 
-        <h3>AWS Velocity Labs / Strands SDK &mdash; Software Development Engineer II</h3>
-        <p class="meta">New York, NY &middot; October 2025 &ndash; Present</p>
+        <details class="role-block">
+        <summary class="role">
+            <h3>AWS Velocity Labs / Strands Agents &mdash; Software Development Engineer II</h3>
+            <span class="meta">New York, NY &middot; October 2025 &ndash; Present</span>
+        </summary>
+        <p class="sub-label">Maintainer: <a class="inline-link" href="https://github.com/strands-agents" target="_blank" rel="noopener">Strands Agents</a> &amp; <a class="inline-link" href="https://github.com/cedar-policy" target="_blank" rel="noopener">Cedar</a></p>
+        <p class="group-label">Context Management</p>
+        <ul>
+            <li><a class="inline-link" href="https://strandsagents.com/blog/introducing-strands-harness/" target="_blank" rel="noopener">Strands harness</a> &mdash; <a class="inline-link" href="https://strandsagents.com/blog/we-ran-94000-trials-to-measure-the-cost-of-harness-choice/" target="_blank" rel="noopener">34% lower token cost</a> than other leading harnesses</li>
+            <li><a class="inline-link" href="https://strandsagents.com/blog/reduced-cost-better-isolation-more-resilience/" target="_blank" rel="noopener">Costs cut in half</a> &mdash; half the tokens, accuracy 68% &rarr; 98%</li>
+            <li><a class="inline-link" href="https://strandsagents.com/docs/user-guide/sdk/storage/" target="_blank" rel="noopener">Storage</a> &mdash; a unified interface for virtual context management
+                <ul>
+                    <li>Integrations including <a class="inline-link" href="https://aws.amazon.com/blogs/database/introducing-strands-dynamodb-storage-durable-agent-storage-for-the-strands-agents-sdk/" target="_blank" rel="noopener">DynamoDB</a> and <a class="inline-link" href="https://www.mongodb.com/company/blog/product-release-announcements/persistent-sessions-memory-for-strands" target="_blank" rel="noopener">MongoDB</a></li>
+                </ul>
+            </li>
+        </ul>
 
-        <h3>New York University &mdash; Visiting Post-Bacc Fellow</h3>
-        <p class="meta">Cybersecurity for Democracy Lab &middot; New York, NY &middot; September 2024 &ndash; Present</p>
+        <p class="group-label">Automated Reasoning &amp; Neurosymbolic AI</p>
+        <ul>
+            <li><a class="inline-link" href="https://strandsagents.com/docs/user-guide/sdk/agents/interventions/" target="_blank" rel="noopener">Interventions</a> &mdash; runtime enforcement for the agent loop
+                <ul>
+                    <li>Implementations with decision models, LLM judges, human-in-the-loop, and policy evaluators</li>
+                </ul>
+            </li>
+            <li>Cedar MCP schema generator &mdash; <a class="inline-link" href="https://pypi.org/project/cedar-policy-mcp-schema-generator/" target="_blank" rel="noopener">Python</a> and <a class="inline-link" href="https://www.npmjs.com/package/@cedar-policy/mcp-schema-generator-wasm" target="_blank" rel="noopener">TypeScript</a> bindings</li>
+            <li><a class="inline-link" href="https://github.com/cedar-policy/cedar-for-agents/tree/main/rust/cedar-policy-agent-builder" target="_blank" rel="noopener">Cedar agent builder</a> &mdash; synthesizes policies, entities, and schemas from declarative authorization config</li>
+            <li><a class="inline-link" href="https://github.com/dogwood-policy/dogwood-wasm" target="_blank" rel="noopener">Dogwood WASM bindings</a> &mdash; Python bindings <span class="status">incoming</span></li>
+        </ul>
 
-        <h3>Amazon &mdash; Software Development Engineer</h3>
-        <p class="meta">New York, NY &middot; May 2024 &ndash; October 2025</p>
+        <p class="group-label">Observability</p>
+        <ul>
+            <li><a class="inline-link" href="https://strandsagents.com/blog/strands-agents-typescript-v1/" target="_blank" rel="noopener">TypeScript 1.0</a> &mdash; OpenTelemetry instrumentation for the TypeScript SDK</li>
+        </ul>
+        </details>
+
+        <details class="role-block">
+        <summary class="role">
+            <h3>New York University &mdash; Visiting Post-Bacc Fellow</h3>
+            <span class="meta">Cybersafety Research Center &middot; New York, NY &middot; September 2024 &ndash; Present</span>
+        </summary>
+        <ul>
+            <li>Visiting data science researcher at the <a class="inline-link" href="https://cybersafetyresearch.org/" target="_blank" rel="noopener">Cybersafety Research Center</a> with <a class="inline-link" href="https://engineering.nyu.edu/faculty/damon-mccoy" target="_blank" rel="noopener">Damon McCoy</a> (NYU) and <a class="inline-link" href="https://www.khoury.northeastern.edu/people/laura-edelson/" target="_blank" rel="noopener">Laura Edelson</a> (Northeastern)</li>
+            <li>Longitudinal content measurement over the TikTok Research API and donated corpora</li>
+        </ul>
+        </details>
+
+        <details class="role-block">
+        <summary class="role">
+            <h3>Amazon &mdash; Software Development Engineer</h3>
+            <span class="meta">New York, NY &middot; May 2024 &ndash; October 2025</span>
+        </summary>
+        <ul>
+            <li><a class="inline-link" href="https://www.amazon.com/b?node=21449952011" target="_blank" rel="noopener">Amazon&rsquo;s Choice</a> and Overall Pick &mdash; the badges that mark a recommended option in search results
+                <ul>
+                    <li>Full-stack badging experiments on high-TPS search traffic</li>
+                    <li>ML ranking work behind the badges</li>
+                    <li>Spark and Hadoop data pipelines for qualification signals</li>
+                </ul>
+            </li>
+        </ul>
+        </details>
     </div>
 
     <div class="section" id="writing">
@@ -359,6 +488,11 @@
         <hr>
         <ul>
             <li>Paper on screen-time tool adoption &mdash; <span class="status">in submission</span>, 2026</li>
+            <li><a class="inline-link" href="https://cybersafetyresearch.org/updating-our-israelgaza-analysis-2-years-on" target="_blank" rel="noopener">Measuring pro-Palestine versus pro-Israel content on TikTok</a> &mdash; Cybersafety Research Center, 2025
+                <ul>
+                    <li>Analysis covered in <a class="inline-link" href="https://www.washingtonpost.com/technology/2025/10/07/tiktok-israel-palestine/" target="_blank" rel="noopener">The Washington Post</a> and <a class="inline-link" href="https://news.northeastern.edu/2025/10/10/tiktok-palestine-posts-israel-hamas-war-research/" target="_blank" rel="noopener">Northeastern Global News</a></li>
+                </ul>
+            </li>
             <li><a class="inline-link" href="https://doi.org/10.1016/j.childyouth.2024.107624" target="_blank" rel="noopener">The meaning of a youth council for suicide prevention</a> &mdash; Children and Youth Services Review, 2024</li>
             <li><a class="inline-link" href="https://journals.library.columbia.edu/index.php/cusj/blog/view/561" target="_blank" rel="noopener">Watermarking Large Language Models</a> &mdash; Columbia Undergraduate Science Journal, 2023</li>
         </ul>
@@ -368,11 +502,11 @@
         <h2>Talks</h2>
         <hr>
         <ul>
-            <li><b>AWS re:Invent 2026</b>, Las Vegas &mdash; &ldquo;Cut Your Token Costs in Half: Context Management in Strands&rdquo;</li>
-            <li><b>AWS re:Invent 2026</b>, Las Vegas &mdash; &ldquo;Enforcing Hard Limits on Agent Guardrails&rdquo;</li>
-            <li><b>AGI Summit 2026</b>, San Francisco &mdash; &ldquo;Cut Your Token Cost in Half&rdquo;</li>
+            <li><b>AWS re:Invent 2026</b>, Las Vegas &mdash; <a class="inline-link" href="https://registration.awsevents.com/flow/awsevents/reinvent2026/eventcatalog/page/eventcatalog?search=OPN406-R" target="_blank" rel="noopener">&ldquo;Cut token costs by 50%: Building context efficient agents with Strands&rdquo;</a></li>
+            <li><b>AWS re:Invent 2026</b>, Las Vegas &mdash; <a class="inline-link" href="https://registration.awsevents.com/flow/awsevents/reinvent2026/eventcatalog/page/eventcatalog?search=AIM451" target="_blank" rel="noopener">&ldquo;Automated Reasoning as Agent Guardrails&rdquo;</a></li>
+            <li><b>AGI Summit 2026</b>, San Francisco &mdash; <a class="inline-link" href="https://agisummit.ai/#speakers-2026" target="_blank" rel="noopener">&ldquo;Cut Token Costs By 50%: Building Context-Efficient Agents&rdquo;</a></li>
             <li><b>Jack Kent Cooke Foundation 2026</b> &mdash; Best Job Talk</li>
-            <li><b>Harvard WECode 2023</b>, Boston &mdash; Distinguished Undergraduate Fellow</li>
+            <li><b>Harvard WECode 2023</b>, Boston &mdash; Undergraduate Fellow</li>
         </ul>
     </div>
 
